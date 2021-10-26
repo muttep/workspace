@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634913519 source:/home/pandu/github/workspace/c-programming/Storage-Classes/static_variables/main.c
+	<stdio.h>
+	<stdlib.h>
+
