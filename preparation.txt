@@ -1,7 +1,3 @@
-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
-
-
-
 Need to cover :
     -- In C
         -- Function pointers
