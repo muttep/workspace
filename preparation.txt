@@ -1,0 +1,6 @@
+Need to cover :
+    -- In C
+        -- Function pointers
+        -- Data structures
+            -- From college note book
+            
