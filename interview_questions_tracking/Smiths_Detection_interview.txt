@@ -1,0 +1,40 @@
+1. Default constructor
+2. Single argument constructor
+3. Copy constructor
+4. Move operator
+
+class MyString {
+	char *str;
+public:
+	MyString() : str=nullptr
+	{
+		str=new char;
+		str[0]='\0';
+	}
+	
+	MyString(char *s) {
+		if(str==nullptr) {
+			str=new char;
+			str[0]='\0';
+		} else {
+			str=new char[sizeof(s)+1];
+			strcpy(str,s);
+			str[sizeof(s)]='\0';
+		}
+	}
+	
+	MyString& operator=(MyString &obj) {
+		str=new char[sizeof(obj.str)+1];
+		strcpy(str,obj.str);
+		return *this;
+	}
+	
+	MyString& operator+(MyString &obj1, MyString &obj2) {		
+		strcat(obj1.str,obj2.str);
+		return obj1;
+	}
+};
+
+Q : If we have the virtual function in base clase with definition and did not written the definition in derived class. What will happens ?
+
+They are looking for core develepper and application layer develepper.

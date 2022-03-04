@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <vector>
 
 using namespace std;
 
@@ -65,14 +66,25 @@ myStringClass::myStringClass(myStringClass&& source)		// Move constructor
 int main()
 {
 	myStringClass a;	// Constructor with no arguments
+	cout<<endl;
 
 	char tmp[]="Hello...!!!";
 
 	myStringClass b{tmp};	//Constructor with only one argument
+	cout<<endl;
 
 	myStringClass c{a};		// copy constructor
+	cout<<endl;
 
+	// cout<<"Here"<<endl;
 	myStringClass d{myStringClass{tmp}};		// Move constructor
+	cout<<endl;
+
+	vector<myStringClass> vec;
+	vec.push_back(myStringClass{ tmp });
+	cout<<endl;
+	vec.push_back(myStringClass{ tmp });
+	cout<<endl;
 
 	return 0;
 }

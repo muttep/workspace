@@ -1,0 +1,87 @@
+
+
+class MyString {
+	char *ptr;
+	char c;
+	
+	static MyString* _instance;
+	
+	MyString(char *ptr1, char c1) {
+		ptr=new char;
+		*ptr=*ptr1;
+		c=c1;
+		
+	}
+	
+	MyString& MyString(const MyString &ms) {
+		ptr=new char;
+		*ptr=*(ms.ptr);
+		c=ms.c;
+		return *this;
+	}
+	
+public:		
+	
+	static MyString* getInstance() {
+		int contr=0;
+		pthread_lock(lock);
+			if(cntr == 0)
+				cntr++;
+				if(_instance == NULL) {
+					pthread_lock(lock);
+						_instance=new MyString;
+					pthread_unlock(lock);
+					cntr=0;
+				}
+			}
+		pthread_unlock(unlock);
+		return _instance;
+	}
+	
+};
+
+static MyString* MyString::_instance;
+
+int main()
+{
+	char x="a";
+	MyString s("a","b",x);
+	
+	return 0;
+}
+
+-----------
+Print even numbers in 1 thread and Odd numbers in other thread
+
+int arr[10]={1,2,3,4,5,6,7,8,9,10};
+
+void printEven()
+{
+	for(int i=0;i<10;i++) {
+		if((arr[i]%2) == 0) {
+			printf("%d\t", a[i]);
+		}
+	}
+}
+
+void printOdd()
+{
+	for(int i=0;i<10;i++) {
+		if((arr[i]%2) == 1) {
+			printf("%d\t", a[i]);
+		}
+	}
+}
+
+int main()
+{
+	pthread_t t1,t2;
+	
+	pthread_create(&t1,NULL,printEven,NULL);
+	pthread_create(&t2,NULL,printOdd,NULL);
+	
+	
+	pthread_join(t1);
+	pthread_join(t2);
+}
+

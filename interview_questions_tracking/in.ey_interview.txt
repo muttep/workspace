@@ -1,0 +1,37 @@
+
+Copy numbers to begining of the arr and zeros to end of the array
+int arr[] = {5,6,7,0,0,8,0,9,0,0}
+
+int max=10;
+int arr1[10]={0};
+
+for(int i=0;i<sizeof(arr);i++) {
+	if(arr[i] != 0) {
+		*arr1 = arr[i];
+		*arr1++;
+	} else {
+		arr1[max]=arr[i];
+		max--;
+	}
+}
+
+
+
+
+
+5
+6
+7
+8
+9
+0
+0
+0
+0
+0
+
+
+const int *ptr;
+int const *ptr;
+
+Function pointers

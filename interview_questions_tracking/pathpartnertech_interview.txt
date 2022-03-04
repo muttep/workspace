@@ -1,0 +1,29 @@
+1. Bits reverse 
+2. Double linked list reverse
+
+struct dlist {
+	int data;
+	struct dlist *next;
+	struct dlist *prev;	
+}
+
+void printReverse(dlist l) {
+	dlist tmp=l;
+
+	while(tmp.prev != NULL) {
+		printf("%d",tmp.data);
+		tmp=tmp->prev;
+	}
+	
+}
+
+-------------
+
+int num=6;
+int rev_num=0;
+int tmp;
+
+for(i=1;i<=8;i++) {
+	tmp=num<<i;
+	rev_num=rev_num|tmp;
+}

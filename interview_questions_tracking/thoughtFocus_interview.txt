@@ -1,0 +1,78 @@
+
+main()
+{
+	int a=1;
+	char b=0;
+	b=(char)a;		
+	if(b==1){
+		printf("little endian");
+	} else {
+		big endian
+	}
+}
+
+a = 0 0 0 0
+
+b = 0
+--------
+
+class Base {
+public:
+	virtual void test(){
+		.....
+	}
+};
+
+class Derived : public Base {
+public:
+	void test() {
+		cout<<"Derived class";
+	}
+};
+
+main()
+{
+	Derived d;
+	Base *b=&d;
+	b->test();
+	
+}
+
+--------------
+
+class Test {
+private:
+	int a;
+	int b;
+	int *p;
+public:
+	Test(int a,int b, int c) {
+		
+	}
+	Test& Test(Test &t) {
+		a=t.a;
+		b=t.b;
+		p=new int;
+		*p=*(t.p);
+	}
+	
+	Test& operator=(Test &t) {
+		a=t.a;
+		b=t.b;
+		p=new int;
+		*p=*(t.p);
+		return *this;
+	}
+};
+
+main()
+{
+	Test a(1,2,3);
+	Test b(10,20,30);
+	
+	a=b;	//assignment opr
+	
+	Test c(a);	//copy const
+	
+}
+---------

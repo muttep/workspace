@@ -1,0 +1,69 @@
+
+class emp {
+
+private: 
+	int *num;
+	
+public:
+	// default contructor
+	emp(int num=0)
+	{
+		
+	}
+	
+	// Copy contructor
+	emp(emp &e)
+	{
+		num = e.num;
+	}
+	
+	// Assignment operator overloading
+	emp& operrator=(num)
+	{
+		num=new emp;
+	}
+		
+};
+
+
+
+main()
+{
+	emp e1, e2;
+	
+	e1=e2;	//copy
+	
+	emp e5=new (5*sizeof(emp));
+	
+	delete[];
+	
+}
+
+------
+What is the output of this code:
+#include <iostream>
+
+using namespace std;
+
+class emp {
+	emp() {
+		cout<<"Display emp"<<endl;
+	}
+
+public:
+	virtual void display()=0;
+};
+
+int main()
+{
+	emp e;
+
+	return 0
+}
+-----------
+EFI -> Client
+
+
+
+
+

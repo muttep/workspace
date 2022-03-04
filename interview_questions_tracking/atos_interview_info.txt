@@ -1,0 +1,35 @@
+void swap(int *a, int *b) {
+	int t;
+	
+	t=*a;
+	*a=*b;
+	*b=t;
+}
+
+class Test {
+	int a;
+	int b;
+public:
+	Test& operator+(const Test &t) {
+		test t1;
+		
+		t1.a=a+t.a;
+		t1.b=b+t.b;
+		
+		return &t1;
+	}
+};
+
+
+
+int main() {
+	
+	int x=10, y=20;
+	
+	swap(&x,&y);
+	
+	retrun 0;
+}
+
+
+Q : If we are using friend function, then are we breaking the oops mechanism of data hiding.

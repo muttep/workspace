@@ -1,0 +1,44 @@
+Interchange nibbles
+char x;
+
+1111 1111
+
+x & 15
+
+char y
+
+y=x&15
+y<<4;
+x=x>>4;
+x=x|y
+
+
+y=y|x
+
+--------------
+SLL : 10,20,30 : Print in reverse direction
+
+struct list {
+	int data;
+	struct list *next;
+};
+
+printReverse(node h) {
+
+	node n=h;
+	
+	while(n.next != NULL) {
+		print();
+	}
+}
+
+
+printReverse(node h) {
+	
+	print(h.data);
+	printReverse(h.next);
+}
+
+-----------------
+Diff BW binary semmaphore and mutex
+

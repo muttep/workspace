@@ -1,0 +1,94 @@
+
+Template T
+class Settings {
+private:
+	static Settings* _instance;
+	T _width;
+	T _height;
+	T _brightness;
+	
+	Settings() {
+		_width=10;
+		_height=20;
+		_brightness=30;
+	}
+public:
+	static Settings* getInstance() {
+		if(_instance==NULL) {		
+			_instance=new Settings;
+		}
+		return _instance;
+	}
+	
+};
+
+Settings* Settings::_instance=NULL;
+
+----------------
+
+class Base {
+public:
+	virtual void display();
+};
+
+class Derived : public Base {
+	int *ptr;
+	public:
+		
+		Derived() {
+			ptr=new int;
+		}
+	
+		void display() {
+			cout<<"From Derived class"<<endl;
+		}
+		
+		void func1() {
+		
+		}
+		
+		~Derived() {
+			delete ptr;
+		}
+};
+
+main()
+{
+	Derived d;
+	Base *b1=&d;
+	Base *b2=new Derived;
+	delete b2;
+	delete b1;
+	
+	b1->display();
+}
+
+void func2(Base *b2) {
+	Derived d2;
+	b2=&d2;
+	
+	b2->display();
+	b2->func1();
+}
+
+-------
+
+pthread_create();
+
+void display(void) {
+	int i;
+	pthread_lock();
+	for(i=0;i<10;i++) {
+		printf("%d", i);
+	}
+	pthread_unlock();
+}
+
+main()
+{
+	pthread_t t1,t2,t3;
+	
+	pthread_create(&t1,NULL,display,NULL);
+	pthread_create(&t2,NULL,display,NULL);
+	pthread_create(&t3,NULL,display,NULL);
+}

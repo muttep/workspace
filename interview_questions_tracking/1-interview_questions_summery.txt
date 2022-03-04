@@ -1,0 +1,83 @@
+HCL Printers team:
+	copy constructure
+	Alignment operator (=) overloading
+
+HCL Routers team:
+	Interchange nibbles in char veriable (lower nibble to upper vaise versa)
+	Single linked list print elements in reverse order with out using any backup or copy. We can use recurssion.
+	Difference between binary mutex and semmaphore in linux
+	
+	struct srt {
+		int a;
+		char b;
+		short int c;
+	}
+	what is the size of structure ? What is packing and padding. Where the packing will added. For which element packing will be added.
+
+ATOS:
+	+ operator overloading
+	If we are using friend function, then are we breaking the oops mechanism of data hiding data members ?
+	
+Capjemini:
+	#include <iostream>
+
+	using namespace std;
+
+	class Test {
+		int a;
+		
+	public:
+		void show() {
+			cout<<"Hello"<<endl;
+		}
+		
+	};
+
+	int main()
+	{
+		//cout<<"Hello World";
+		
+		Test *ptr=NULL;
+		ptr->show();
+
+		return 0;
+	}
+	
+Philips:
+	My own string class. Apply singleton design pattern, with threads and mutexes.
+	From the given array with numbers. Print even and odd numbers in separate threads.
+	
+Altimetrik:
+	.Wtite a singleton class with templates
+	.Create 2 threads, display alternate number in each threads. Thread1-1, thread2-2, thread1-3, thread1=2-4....
+
+Harman and others:
+	. STL's
+	. Wtite a template function
+	. Difference BW map and Hash
+	. Types of smart pointers
+	
+pathpartnertech :
+	1. Bits reverse 
+	2. Linked list reverse
+
+Cyient :	
+. + operator overloading for strings or char pointers.
+. inc c, how free() know how many bytes of memory need to delete ?
+. What is the max threads can be supported ? 
+	-- It will be depending on the system design.
+
+in.ey:
+	Copy numbers to begining of the arr and zeros to end of the array
+	int arr[] = {5,6,7,0,0,8,0,9,0,0}	
+	difference BW const int *ptr; & int const *ptr;
+	Function pointers
+	
+========
+Topics Need to cover:
+	. Smart pointers
+	. STL
+	. Cast operators
+	. Memory management, unix file system
+	
+	

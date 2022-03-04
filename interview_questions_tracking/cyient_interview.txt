@@ -1,0 +1,37 @@
+
+class Test {
+private:
+	char *a;	
+public:
+	void test1(char a[],int n) {
+		strcpy(this->a,b);
+	}
+	
+	operator+(Test &x) {
+		
+		strcpy(a,x.a);
+	}
+	
+	
+	
+};
+
+main()
+{	
+	Test t1,t2,
+	t1.test1("abc",3);
+	t2.test1("xyz",3);
+	Test t3=t1+t2;
+	
+	t1=t1+t2;
+	cout<<t1.a;
+	
+	
+	t3
+}
+----------
+Q
+. + operator overloading for strings or char pointers.
+. inc c, how free() know how many bytes of memory need to delete ?
+. What is the max threads can be supported ? 
+	-- It will be depending on the system design.

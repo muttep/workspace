@@ -1,0 +1,44 @@
+
+class Base {
+public:
+	virtual display()=0;
+	virtual ~Base(){
+		cout<<"Base cnst";
+	}
+};
+
+class Derived public Base {
+private:
+	int a;
+	int b;
+	int *ptr;
+public:
+	void display() {
+		cout<<"Hello";
+	}
+	
+	Derived() {
+		cout<<"Derived distructor";
+	}
+	
+	Derived(const Derived &obj) {
+		a=obj.a;
+		b=obj.b;
+		ptr=new int;
+		*ptr=*(obj->ptr);
+	}
+};
+
+template <class T>
+T addition(T a, T b)
+{
+	return a+b;
+}
+
+
+main()
+{
+	pthread_t t1;
+	
+	pthread_create(&);
+}

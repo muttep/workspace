@@ -1,0 +1,25 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+class Test {
+    int a;
+    
+public:
+    void show() {
+        cout<<"Hello"<<endl;
+    }
+    
+};
+
+int main()
+{
+    //cout<<"Hello World";
+    
+    Test *ptr=NULL;
+    ptr->show();
+
+    return 0;
+}
