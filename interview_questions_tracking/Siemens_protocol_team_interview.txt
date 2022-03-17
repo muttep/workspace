@@ -1,0 +1,50 @@
+
+pthread_t t1,t2;
+pthread_mutex_t lock;
+
+int count=0;
+int MAX=10;
+
+void fun1()
+{
+	printf("func1 called");
+	pthread_mutext_lock(&lock);
+	if(count<MAX)
+		count++;
+	pthread_mutext_unlock(&lock);
+}
+
+void fun2()
+{
+	printf("func2 called");	
+	pthread_mutext_lock(&lock);
+	if(count<MAX)
+		count++;
+	pthread_mutext_unlock(&lock);
+}
+
+main()
+{
+	pthread_create(&t1,NULL,fun1,NULL);
+	pthread_create(&t2,NULL,fun2,NULL);
+
+	pthread_join(&t1,NULL);
+	pthread_join(&t2,NULL);
+}
+
+------
+// find the duplicate characters in the string
+char str1[10]={"ranganadh"};
+char str2[10]={};
+char tmp;
+
+for(int i=0;i<strln(str1);i++) {
+	tmp=str[i];
+	*str=[]
+	for(int j=1<=strln(str1);i++) {
+		//*str=tmp;
+		if(tmp != str1[j]) {
+			*str2++ = tmp;
+		}
+	}
+}

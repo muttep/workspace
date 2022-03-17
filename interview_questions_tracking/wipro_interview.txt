@@ -1,0 +1,24 @@
+// Mobile settings
+
+class MobileSettings{
+	static MobileSettings* _instance;
+	int _height;
+	int _width;
+	MobileSettings():_height(100),_width(50){}
+	public:
+		static MobileSettings* getInstance() {
+			if(_instance==NULL) {
+				pthread_mutext_lock();
+				if(_instance==NULL) {
+					_instance=new MobileSettings;
+				}
+			}
+			pthread_mutext_unlock();
+			return _instance;
+		}
+};
+
+MobileSettings* MobileSettings::_instance==NULL;
+
+
+venkanna@eprotons.com

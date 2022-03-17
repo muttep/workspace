@@ -1,0 +1,68 @@
+
+class MobileSettings{
+	private:
+		static MobileSettings* _instance;
+		
+		int _width;
+		int _height;
+
+		MobileSettings() : _width(10),_height(20) {}
+	public:
+		static MobileSettings* getInstance() {
+			if(_instance==NULL) {
+				_instance=new MobileSettings;
+			}
+		}
+};
+
+MobileSettings* MobileSettings::_instance=NULL;
+
+--------
+
+class Data{
+	char* str;
+	char str[10];
+	public:
+		Data(char *s) {
+			str=new char[strln(s)+1];
+			strcpy(str,s);
+			str[strln(s)]='\0';
+		}
+
+		Data(Data &obj) {
+			str=new char[strln(obj.str)+1];
+			strcpy(str,obj.str);
+			str[strnl(str)]='\0';
+		}
+
+		Data* operator=(Data &obj) {
+
+			if(str==nullptr) {
+				str=new char[strln(obj.str)+1];
+				strcpy(str,obj.str);
+				str[strln(str)]='\0';
+				return *this;
+			} else if(strln(str)==strln()) {
+				strcpy(str,obj.str);
+				str[strnl(str)]='\0';
+			}
+
+			
+		}
+
+		~Data() {
+			delete str;
+		}
+};
+
+
+
+main()
+{
+	Data obj1="Hello";
+	Data obj2=obj1;
+	Data obj3;
+	obj3=obj1;
+
+	obj2=obj1;
+}

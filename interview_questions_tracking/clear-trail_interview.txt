@@ -1,0 +1,18 @@
+// Need to implement the class that have to create the buffer of 1GB shared memory. Process A will b writing the date and Process B will be reading the data.
+At any point of time data should not be loose or overwrite.
+
+int main()
+{
+	pid=p1,p2;
+
+	p1=fork();
+	p2=fork();
+
+	//Make the p1 demanize
+	//Make the p2 demanize
+
+	//Create the shared memmory using mmap()
+		//size argumemnt 1GB
+
+	return 0;
+}

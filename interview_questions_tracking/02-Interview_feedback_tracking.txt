@@ -7,7 +7,7 @@ ATOS : Need to get feedback
 	Done on 22/Feb
 	POC : ATOS HR
 	
-= Philips-1 : She said her Manager will call me on sat/monday for HR discussion.
+- Philips-1 : She said her Manager will call me on sat/monday for HR discussion.
 	DOne on 22/Feb
 	POC : Chandrika Narla/Consultent
 		

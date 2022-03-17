@@ -1,0 +1,17 @@
+Find bits in the integer
+
+0000 0000 0000 1111
+
+int x=0xF;
+int bits=0;
+
+for()
+x&0xFF;
+
+---------
+class GameSettings {
+	static GameSettings* _instance;
+	private:
+		GameSettings() {}
+};
+

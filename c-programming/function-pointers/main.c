@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#if 0
-int display(void);
+#if 1
+void display(void);
 
 int main()
 {
-    int (*func_ptr)();
+    void (*func_ptr)();
 
     func_ptr = display;
 
@@ -17,14 +17,14 @@ int main()
     return 0;
 }
 
-int display(void)
+void display(void)
 {
 
     printf("Function pointer called.\n");
 }
 #endif
 
-
+#if 0
 void function1(int);
 void function2(int);
 
@@ -55,3 +55,4 @@ void function2(int b)
 
     printf("Value : %d\n", b);
 }
+#endif

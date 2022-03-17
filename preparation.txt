@@ -1,5 +1,29 @@
-Need to cover :
-    -- In C
-        -- Function pointers
-        -- Data structures
-            -- From college note book
+C++
+    data structures, standard library, STL containers, and algorithms
+    templating in C++
+    GNU C++ libraries and debugging method
+    GCC/g++ compilers
+    process and thread handling in C++ over UNIX and Linux
+    Design Patterns
+    algorithms
+    Unix Knowledge
+    
+    multi-threaded applications
+
+    memory management in non-garbage collected environments
+
+    Knowledge of the latest C++11 / C++14 standard
+
+    database concepts
+
+    REST, JSON & web services
+
+    Scrum or Kanban experience. GIT and Jenkins experience. 
+
+    user and kernel space on Linux/Unix
+    shell programming & Perl Scripting, Python
+
+
+    GIT
+
+    Rest API

@@ -1,0 +1,28 @@
+
+int x=22;
+int y=0;
+
+y=x & 0xFF;
+
+-------
+struct packet {
+	char info[255];
+	uint size;
+};
+
+---
+struct pack {
+	int a;
+	char b;
+};
+
+--------
+
+class Test {
+	private:
+		member variables;
+	public:
+		member functions;
+	protected;
+		variables and functions;
+};

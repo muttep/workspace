@@ -1,0 +1,42 @@
+
+
+class Test {
+	private:
+		int a;		// Buffer size
+		void *ptr; // Buffer
+	public:
+		Test() : a(NULL),ptr(nullptr) {}
+		
+		Test(int a) {			
+			ptr=new sizeof(a);
+			memset(ptr,0,sizeof(a));
+		}
+
+		Test(const Test &obj) {
+			if(obj != nullptr) {
+				ptr=new sizeof(obj.a);
+				memcpy(ptr,obj,sizeof(obj.a));
+			} else {
+				ptr=new sizeof(obj.a);
+				memset(ptr,0,sizeof(obj.a));
+			}
+		}
+
+		Test& operator=(const Test &obj) {
+			if(obj != nullptr) {
+				ptr=new sizeof(obj.a);
+				memcpy(ptr,obj,sizeof(obj.a));
+			} else {
+				ptr=new sizeof(obj.a);
+				memset(ptr,0,sizeof(obj.a));
+			}
+
+			return *this;
+		}
+
+		~Test(){
+			if(ptr != nullptr)
+				delete ptr;
+		}
+};
+
