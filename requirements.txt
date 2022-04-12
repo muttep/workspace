@@ -1,0 +1,15 @@
+- STL, Templates
+- malgorithm design, problem solving, and complexity analysis
+- Multithreading experience including race conditions, deadlocks and debuggin`
+- Knowledge of modern software design and development methodologies.
+- coding standards, code reviews
+- Exposure in memory management, standard data structures and algorithms
+- Ability to design a Class Model, Data Model for a given requirement
+- Strong in Debugging, Memory Leaks, Profiling, Crashes, etc
+- Knowledge of XML and relational databases
+- cripting Python, shell, perl
+- SQL and relational databases (Oracle, MS SQL, Postgres)
+- Experience in Virtualization & debugging exposure.
+
+- QT/QML Experience is added advantage
+- Hands on QT framework

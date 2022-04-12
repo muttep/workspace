@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class car	// It is called Abstact class, as here all are pure virtual functions. We can not create the object for the Abstract class.
+class car	// It is called Abstact class, as here pure virtual function present. We can not create the object for the Abstract class.
 {
 public:
 	virtual void display()=0;	// It is called pure virtual function.
